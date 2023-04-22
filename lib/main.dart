@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Book App',
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -35,12 +35,27 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
         ],
       ),
-      body: Center(
-        child: Text("Book App"),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20.0, 0, 20.0),
+            child: Center(
+              child: Title(
+                color: Colors.green,
+                child: const Text(
+                  "Your Titles",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
