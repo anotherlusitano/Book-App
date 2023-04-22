@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.orange,
+          primarySwatch: Colors.deepOrange,
         ),
+        scaffoldBackgroundColor: Color.fromRGBO(61, 83, 129, 1),
         textTheme: GoogleFonts.emilysCandyTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
@@ -48,6 +49,7 @@ class HomePage extends StatelessWidget {
                 "Your Titles",
                 style: TextStyle(
                   fontSize: 20.0,
+                  color: Colors.white,
                 ),
               ),
             ),
