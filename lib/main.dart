@@ -44,13 +44,10 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 20.0, 0, 20.0),
             child: Center(
-              child: Title(
-                color: Colors.green,
-                child: const Text(
-                  "Your Titles",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                  ),
+              child: Text(
+                "Your Titles",
+                style: TextStyle(
+                  fontSize: 20.0,
                 ),
               ),
             ),
