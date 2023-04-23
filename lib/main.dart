@@ -40,10 +40,29 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.refresh),
+            label: 'a',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outlined),
+            label: 'b',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info_outline),
+            label: 'c',
+          ),
+        ],
+      ),
+      body: const Column(
         children: [
+          //Your Titles
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 20.0, 0, 20.0),
+            padding: EdgeInsets.fromLTRB(0, 20.0, 0, 20.0),
             child: Center(
               child: Text(
                 "Your Titles",
@@ -54,6 +73,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+
+          //TODO: Your Titles Books Section
         ],
       ),
     );
