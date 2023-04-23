@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.deepOrange,
         ),
-        scaffoldBackgroundColor: Color.fromRGBO(61, 83, 129, 1),
         textTheme: GoogleFonts.emilysCandyTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
@@ -58,23 +57,26 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: const Column(
-        children: [
-          //Your Titles
-          Padding(
-            padding: EdgeInsets.fromLTRB(0, 20.0, 0, 20.0),
-            child: Center(
-              child: Text(
-                "Your Titles",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
+      body: Container(
+        decoration: backgroundGradient(),
+      ),
+    );
+  }
 
-          //TODO: Your Titles Books Section
+  //TODO: Your Titles Books Section
+
+  BoxDecoration backgroundGradient() {
+    return const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.centerLeft,
+        end: Alignment.centerRight,
+        tileMode: TileMode.mirror,
+        stops: [0.0, 0.4, 0.6, 1],
+        colors: [
+          Color(0xFF37474F),
+          Color(0xFF455A64),
+          Color(0xFF455A64),
+          Color(0xFF37474F),
         ],
       ),
     );
