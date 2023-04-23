@@ -12,10 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.deepOrange,
-        ),
-        textTheme: GoogleFonts.emilysCandyTextTheme(),
+        textTheme:
+            GoogleFonts.emilysCandyTextTheme(Theme.of(context).textTheme),
         iconTheme: const IconThemeData(color: Colors.white, size: 28.0),
       ),
       debugShowCheckedModeBanner: false,
@@ -103,6 +101,7 @@ class CustomBanner extends StatelessWidget {
               children: <Widget>[
                 const Text(
                   'Book App',
+                  style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
                 Expanded(
                   child: Container(),
