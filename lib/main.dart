@@ -39,26 +39,16 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.refresh),
-            label: 'a',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined),
-            label: 'b',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.info_outline),
-            label: 'c',
-          ),
-        ],
-      ),
       body: Container(
         decoration: backgroundGradient(),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: CustomBottomNav(),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -77,6 +67,23 @@ class HomePage extends StatelessWidget {
           Color(0xFF455A64),
           Color(0xFF455A64),
           Color(0xFF37474F),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomBottomNav extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 60,
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Icon(Icons.refresh),
+          Icon(Icons.person_outline),
+          Icon(Icons.info_outline),
         ],
       ),
     );
