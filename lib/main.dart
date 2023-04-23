@@ -89,6 +89,7 @@ class CustomBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
+      painter: LinePainter(),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16),
         height: 90.0,
@@ -113,5 +114,26 @@ class CustomBanner extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class LinePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = Paint()
+      ..color = Colors.white
+      ..strokeWidth = 0.2
+      ..style = PaintingStyle.stroke;
+
+    Path path = Path();
+    path.moveTo(0, size.height + 10);
+    path.lineTo(size.width, size.height + 10);
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
   }
 }
