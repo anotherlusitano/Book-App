@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.deepOrange,
         ),
         textTheme: GoogleFonts.emilysCandyTextTheme(),
+        iconTheme: const IconThemeData(color: Colors.white, size: 28.0),
       ),
       debugShowCheckedModeBanner: false,
       title: 'Book App',
